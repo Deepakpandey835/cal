@@ -1,4 +1,4 @@
-package com.example.android_scientific_calculator;
+package com.Deepak_88720.calculator;
 
 import org.junit.Test;
 

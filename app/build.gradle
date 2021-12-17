@@ -4,7 +4,7 @@ android {
     compileSdkVersion 31
     buildToolsVersion "31.0.0"
     defaultConfig {
-        applicationId "com.example.android_scientific_calculator"
+        applicationId "com.Deepak_88720.calculator"
         minSdkVersion 25
         targetSdkVersion 31
         versionCode 1

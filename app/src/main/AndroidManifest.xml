@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_scientific_calculator">
+    package="com.Deepak_88720.calculator">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/calculatorlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".About"
+        <activity android:name="com.Deepak_88720.calculator.About"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".MainActivity"
+        <activity android:name="com.Deepak_88720.calculator.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

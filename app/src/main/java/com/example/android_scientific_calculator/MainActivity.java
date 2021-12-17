@@ -17,10 +17,9 @@ public class MainActivity extends AppCompatActivity {
     boolean Addition, Subtract, Multiplication, Division, Reminder, NoPower,
             istpower, Sin, Arithmetic, Cos, Tan;
 
-    Button  about, clearbutton, dividebutton, multiplybutton, deletebutton, button7, button8, button9, minusbutton, button4,
-            button5, button6, plusbutton, button1, button2, button3, button0, pointbutton, equalbutton, xfactorialbutton,
-            sinbutton, cosbutton, tanbutton, piebutton, squarerootbutton, modulosbutton,
-            epowerbtn, stpower2nd, ansbuttton;
+    Button  clearbutton, dividebutton, multiplybutton, deletebutton, button7, button8, button9, minusbutton, button4,
+            button5, button6, plusbutton, button1, button2, button3, button0, pointbutton, equalbutton,
+            sinbutton, cosbutton, tanbutton, piebutton, squarerootbutton, modulosbutton, stpower2nd, ansbuttton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //        scientific_operation();
 //    }
-//    public void scientific_operation(){
-        about=(Button)findViewById(R.id.aboutId);
+//    public void scientific_operation()
         txtview=(TextView) findViewById(R.id.txt);
         clearbutton=(Button) findViewById(R.id.clearrbtn);
         dividebutton=(Button) findViewById(R.id.dividebtn);
@@ -50,15 +48,12 @@ public class MainActivity extends AppCompatActivity {
         pointbutton=(Button) findViewById(R.id.pointbtn);
         equalbutton=(Button) findViewById(R.id.equalbtn);
         squarerootbutton=(Button) findViewById(R.id.squarerootbtn);
-        xfactorialbutton=(Button) findViewById(R.id.xfactorialbtn);
         sinbutton=(Button) findViewById(R.id.sinbtn);
         cosbutton=(Button) findViewById(R.id.cosbtn);
         tanbutton=(Button)findViewById(R.id.tanbtn);
         ansbuttton=(Button) findViewById(R.id.ansbtn);
         piebutton=(Button) findViewById(R.id.piebtn);
         deletebutton=(Button) findViewById(R.id.deletebtn);
-        modulosbutton=(Button)findViewById(R.id.modulousbtn);
-        epowerbtn=(Button) findViewById(R.id.epowerbtn);
         stpower2nd=(Button) findViewById(R.id.istpower2nd);
 
         stpower2nd.setOnClickListener(new View.OnClickListener() {
@@ -70,21 +65,6 @@ public class MainActivity extends AppCompatActivity {
                     txtview.setText(null);
                 }
                 catch (Exception e) {
-                    Toast t = Toast.makeText(MainActivity.this, "Syntax ERROR", Toast.LENGTH_LONG);
-                    t.setGravity(Gravity.CENTER, 0, 0);
-                    t.show();
-                }
-            }
-        });
-        epowerbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Double n = Double.parseDouble(txtview.getText().toString());
-                    Double exp = (Double) Math.pow(2.718281828, n);
-                    txtview.setText(exp+"");
-                }
-                catch (Exception e){
                     Toast t = Toast.makeText(MainActivity.this, "Syntax ERROR", Toast.LENGTH_LONG);
                     t.setGravity(Gravity.CENTER, 0, 0);
                     t.show();
@@ -166,29 +146,6 @@ public class MainActivity extends AppCompatActivity {
                     a = Double.parseDouble(txtview.getText().toString());
                     Double result = (Double) Math.tan(Math.toRadians(a));
                     txtview.setText(result + "");
-                }
-                catch(Exception e){
-                    Toast t = Toast.makeText(MainActivity.this, "Syntax ERROR", Toast.LENGTH_LONG);
-                    t.setGravity(Gravity.CENTER, 0, 0);
-                    t.show();
-                }
-            }
-        });
-        xfactorialbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    a = Double.parseDouble(txtview.getText().toString());
-                    int er = 0; double i, s = 1;
-                    if (a< 0) {
-                        er = 20;
-                    }
-                    else {
-                        for (i = 2; i <= a; i += 1.0)
-                            s *= i;
-                    }
-                    txtview.setText("");
-                    txtview.setText(txtview.getText().toString() + s);
                 }
                 catch(Exception e){
                     Toast t = Toast.makeText(MainActivity.this, "Syntax ERROR", Toast.LENGTH_LONG);
@@ -436,13 +393,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtview.setText(ans+"");
-            }
-        });
-        about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent abt = new Intent(MainActivity.this, About.class);
-                startActivity(abt);
             }
         });
     }
